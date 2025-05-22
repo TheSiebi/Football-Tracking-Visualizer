@@ -30,7 +30,7 @@ For every game you wish to visualize, you need to prepare four CSV files, with t
 
 **Notes**:
 - type should be one of `{throw_in, goal_kick, free_kick, corner}`
-- matchPeriod should one of `{1H, 2H}`
+- matchPeriod should be one of `{1H, 2H}`
 - timestamp and duration in seconds
 
 #### `{matchid}_tracking.csv`
