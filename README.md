@@ -12,7 +12,7 @@ This Unity application allows interactive, real-time exploration of Skillcorner 
 **This viewer does not come with any tracking/event data.** Skillcorner tracking and Wyscout event data needs to be pre-processed into a CSV format.
 When starting the viewer, you can set the path to the folder where this CSV data is stored.
 ### Pre-Processing Data
-For every game you wish to visualize, you need to prepare the four CSV files, with the following columns present:
+For every game you wish to visualize, you need to prepare four CSV files, with the following columns present:
 #### `{matchid}_lineup.csv`
 | match_id | team_name | player_id | player_first_name | player_last_name | player_shirt_number | player_position | player_birthdate | start_time | end_time | yellow_card | red_card | injured | goal | own_goal |
 |----------|-----------|-----------|--------------------|-----------------|---------------------|-----------------|------------------|------------|----------|-------------|----------|---------|------|----------|
