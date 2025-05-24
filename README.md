@@ -1,7 +1,7 @@
 # 3D Real-Time Viewer for Football Tracking Data
 This Unity application allows interactive, real-time exploration of Skillcorner and Wyscout football tracking data in 3D, and was created as part of the Soccer Analytics course at ETH Zurich.
 
-![Screenshot_2025-04-27_105648](https://github.com/user-attachments/assets/051931ce-ebf6-4576-b05c-bf4af3bf5532)
+![051931ce-ebf6-4576-b05c-bf4af3bf5532](https://github.com/user-attachments/assets/0125d8a3-ec75-4343-bdc0-71d8d8b3cab0)
 
 ## Features
 - Real-time or custom-speed replay of full football matches, including timestamp seeking
