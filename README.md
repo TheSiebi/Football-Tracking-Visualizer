@@ -50,7 +50,6 @@ You may want to add certain matchids to the `flipPositions` dictionary (inside `
 ### Running the Application
 If you are on Windows, you can download a build [here](https://github.com/TheSiebi/Football-Tracking-Visualizer/releases/).
 If you are on another OS and/or want to build the application yourself/run it through the editor, install Unity 6000.0.23f1 (more recent versions likely work as well).
-In this case, if you don't want to go through the main menu every time to set the data folder path, you can place your data under `Assets/Data` and adjust the default value for the team name in the C# scripts (currently set to "Denmark").
 
 #### Controls
 - WASD: Move forward/left/backward/right
