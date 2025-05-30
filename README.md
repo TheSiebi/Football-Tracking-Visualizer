@@ -9,8 +9,10 @@ This Unity application allows interactive, real-time exploration of Skillcorner 
 - Visualization of all set pieces of a given type (goal kicks, free kicks, corner kicks, throw-ins) across matches or for a single match
 
 ## Setup
-**This viewer does not come with any tracking/event data.** Skillcorner tracking and Wyscout event data needs to be pre-processed into a CSV format.
+This viewer now includes pre-processed [SkillCorner open tracking data](https://github.com/SkillCorner/opendata) for 9 matches from the 2019/2020 season. However, no Wyscout event data is included.
+Both SkillCorner tracking data and Wyscout event data (if used) must be pre-processed into a CSV format.
 When starting the viewer, you can set the path to the folder where this CSV data is stored.
+
 ### Pre-Processing Data
 For every game you wish to visualize, you need to prepare four CSV files, with the following columns present:
 #### `{matchid}_lineup.csv`
@@ -61,4 +63,5 @@ If you are on another OS and/or want to build the application yourself/run it th
 ## Attributions
 - 3D Goal Models by Emmanuel PUYBARET / eTeks <info@eteks.com>  and Scopia Visual Interfaces Systems, s.l. (http://www.scopia.es)
 - [Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser) by gkngkc
+- [SkillCorner Open Data](https://github.com/SkillCorner/opendata)
 
