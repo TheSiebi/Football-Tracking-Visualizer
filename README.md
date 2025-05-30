@@ -1,7 +1,7 @@
 # 3D Real-Time Viewer for Football Tracking Data
 This Unity application allows interactive, real-time exploration of Skillcorner and Wyscout football tracking data in 3D, and was created as part of the Soccer Analytics course at ETH Zurich.
 
-![Screenshot_2025-04-27_105648](https://github.com/user-attachments/assets/051931ce-ebf6-4576-b05c-bf4af3bf5532)
+![051931ce-ebf6-4576-b05c-bf4af3bf5532](https://github.com/user-attachments/assets/0125d8a3-ec75-4343-bdc0-71d8d8b3cab0)
 
 ## Features
 - Real-time or custom-speed replay of full football matches, including timestamp seeking
@@ -36,10 +36,10 @@ For every game you wish to visualize, you need to prepare four CSV files, with t
 #### `{matchid}_tracking.csv`
 | match_id | half | frame_id | timestamp | object_id | x      | y      | z     | extrapolated |
 |----------|------|----------|-----------|-----------|--------|--------|-------|--------------|
-| 12345    | 1    | 452      | 14.123    | 7         | 34.2   | 21.8   | 0.0   | False        |
+| 12345    | 1    | 452      | 14123    | 7         | 34.2   | 21.8   | 0.0   | False        |
 
 **Notes**:
-- timestamp in seconds
+- timestamp in milliseconds
 - x, y, z in meters
 - ball should have object_id -1
 
@@ -50,7 +50,6 @@ You may want to add certain matchids to the `flipPositions` dictionary (inside `
 ### Running the Application
 If you are on Windows, you can download a build [here](https://github.com/TheSiebi/Football-Tracking-Visualizer/releases/).
 If you are on another OS and/or want to build the application yourself/run it through the editor, install Unity 6000.0.23f1 (more recent versions likely work as well).
-In this case, if you don't want to go through the main menu every time to set the data folder path, you can place your data under `Assets/Data` and adjust the default value for the team name in the C# scripts (currently set to "Denmark").
 
 #### Controls
 - WASD: Move forward/left/backward/right
