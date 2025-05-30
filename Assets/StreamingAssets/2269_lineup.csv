@@ -1,0 +1,37 @@
+match_id,team_name,player_id,player_first_name,player_last_name,player_shirt_number,player_position,player_birthdate,start_time,end_time,yellow_card,red_card,injured,goal,own_goal
+2269,Paris Saint-Germain,10263,Thiago,Silva,2,Right Center Back,1984-09-22,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,11189,Maxime,Lopez,27,Right Midfield,1997-12-04,00:00:00,00:45:00,0,0,False,0,0
+2269,Olympique de Marseille,4332,Hiroki,Sakai,2,Left Wing Back,1990-04-12,00:00:00,,1,0,False,0,0
+2269,Olympique de Marseille,24026,Dario,Benedetto,9,Center Forward,1990-05-17,00:00:00,01:19:57,0,0,False,0,0
+2269,Olympique de Marseille,10633,Valere,Germain,28,Right Winger,1990-04-17,00:00:00,01:21:23,0,0,False,0,0
+2269,Paris Saint-Germain,5895,Keylor,Navas,1,Goalkeeper,1986-12-15,00:00:00,,0,0,False,0,0
+2269,Paris Saint-Germain,8748,Presnel,Kimpembe,3,Left Center Back,1995-08-13,00:00:00,,0,0,False,0,0
+2269,Paris Saint-Germain,5512,Juan,Bernat,14,Left Wing Back,1993-03-01,00:00:00,,1,0,False,0,0
+2269,Paris Saint-Germain,7023,,Marquinhos,5,Center Midfield,1994-05-14,00:00:00,,0,0,False,0,0
+2269,Paris Saint-Germain,6828,Marco,Verratti,6,Left Midfield,1992-11-05,00:00:00,,0,0,False,0,0
+2269,Paris Saint-Germain,885,Angel,Di Maria,11,Right Winger,1988-02-14,00:00:00,,0,0,False,0,0
+2269,Paris Saint-Germain,9776,Sergio,Rico,16,Substitute,1993-09-01,,,0,0,False,0,0
+2269,Paris Saint-Germain,123,Abdou,Diallo,22,Substitute,1996-05-04,,,0,0,False,0,0
+2269,Paris Saint-Germain,3149,Eric,Maxim Choupo-Moting,17,Substitute,1989-03-23,,,0,0,False,0,0
+2269,Olympique de Marseille,10084,Steve,Mandanda,30,Goalkeeper,1985-03-28,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,11343,Boubacar,Kamara,4,Right Center Back,1999-11-23,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,11335,Duje,Caleta-Car,15,Left Center Back,1996-09-17,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,2759,Dimitri,Payet,10,Left Winger,1987-03-29,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,11031,Yohann,Pele,16,Substitute,1982-11-04,,,0,0,False,0,0
+2269,Olympique de Marseille,652,Alvaro,Gonzalez Soberon,3,Substitute,1990-01-08,,,0,0,False,0,0
+2269,Olympique de Marseille,10629,Valentin,Rongier,21,Left Midfield,1994-12-07,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,11926,Nemanja,Radonjic,7,Substitute,1996-02-15,,,0,0,False,0,0
+2269,Paris Saint-Germain,5580,Julian,Draxler,23,Substitute,1993-09-20,,,0,0,False,0,0
+2269,Olympique de Marseille,12263,Saïf-Eddine,Khaoui,24,Substitute,1995-04-27,,,0,0,False,0,0
+2269,Olympique de Marseille,5875,Kevin,Strootman,12,Center Midfield,1990-02-13,00:00:00,,0,0,False,0,0
+2269,Paris Saint-Germain,698,Ander,Herrera,21,Right Midfield,1989-08-14,00:00:00,01:18:53,0,0,False,0,0
+2269,Paris Saint-Germain,12297,Colin,Dagba,31,Right Wing Back,1998-09-09,00:00:00,01:00:28,1,0,False,0,0
+2269,Paris Saint-Germain,6038,Kylian,Mbappe,7,Left Winger,1998-12-20,00:00:00,01:10:48,0,0,False,2,0
+2269,Paris Saint-Germain,7322,Mauro,Icardi,18,Center Forward,1993-02-19,00:00:00,,0,0,False,2,0
+2269,Olympique de Marseille,1430,Bouna,Sarr,17,Right Wing Back,1992-01-31,00:00:00,,0,0,False,0,0
+2269,Olympique de Marseille,7771,Morgan,Sanson,8,Right Winger,1994-08-18,01:21:23,,0,0,False,0,0
+2269,Olympique de Marseille,24744,Marley,Ake,36,Center Forward,2001-01-05,01:19:57,,0,0,False,0,0
+2269,Paris Saint-Germain,8345,Pablo,Sarabia,19,Right Midfield,1992-05-11,01:18:53,,0,0,False,0,0
+2269,Paris Saint-Germain,2951,Edinson,Cavani,9,Left Winger,1987-02-14,01:10:48,,0,0,False,0,0
+2269,Paris Saint-Germain,6106,Leandro,Paredes,8,Right Wing Back,1994-06-29,01:00:28,,0,0,False,0,0
+2269,Olympique de Marseille,5313,Jordan,Amavi,18,Right Midfield,1994-03-09,00:45:00,,0,0,False,0,0

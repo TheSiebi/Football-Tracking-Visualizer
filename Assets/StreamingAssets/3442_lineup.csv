@@ -1,0 +1,37 @@
+match_id,team_name,player_id,player_first_name,player_last_name,player_shirt_number,player_position,player_birthdate,start_time,end_time,yellow_card,red_card,injured,goal,own_goal
+3442,Real Madrid CF,10271,Thibaut,Courtois,13,Goalkeeper,1992-05-11,00:00:00,,0,0,False,0,0
+3442,Real Madrid CF,2199,Daniel,Carvajal,2,Right Wing Back,1992-01-11,00:00:00,,1,0,False,0,0
+3442,Real Madrid CF,8886,Raphael,Varane,5,Right Center Back,1993-04-25,00:00:00,,0,0,False,0,0
+3442,Real Madrid CF,9775,Sergio,Ramos,4,Left Center Back,1986-03-30,00:00:00,,0,0,False,0,0
+3442,Real Madrid CF,6733,,Marcelo,12,Left Wing Back,1988-05-12,00:00:00,,0,0,False,0,0
+3442,Real Madrid CF,1684,,Casemiro,14,Center Midfield,1992-02-23,00:00:00,,0,0,False,0,0
+3442,Real Madrid CF,10530,Toni,Kroos,8,Left Midfield,1990-01-04,00:00:00,,0,0,False,0,0
+3442,Real Madrid CF,4497,,Isco,22,Right Winger,1992-04-21,00:00:00,01:18:27,0,0,False,0,0
+3442,Real Madrid CF,12397,Junior,Vinicius,25,Left Winger,2000-07-12,00:00:00,,1,0,False,1,0
+3442,Real Madrid CF,638,Alphonse,Areola,1,Substitute,1993-02-27,,,0,0,False,0,0
+3442,Real Madrid CF,11311,Ferland,Mendy,23,Substitute,1995-06-08,,,0,0,False,0,0
+3442,Real Madrid CF,12821,Eder,Militao,3,Substitute,1998-01-18,,,0,0,False,0,0
+3442,Real Madrid CF,3747,Gareth,Bale,11,Substitute,1989-07-16,,,0,0,False,0,0
+3442,FC Barcelona,6689,Marc-Andre,ter Stegen,1,Goalkeeper,1992-04-30,00:00:00,,0,0,False,0,0
+3442,FC Barcelona,11514,Nelson,Semedo,2,Right Wing Back,1993-11-16,00:00:00,,0,0,False,0,0
+3442,FC Barcelona,9533,Samuel,Umtiti,23,Left Center Back,1993-11-14,00:00:00,,0,0,False,0,0
+3442,FC Barcelona,3862,Gerard,Pique,3,Right Center Back,1987-02-02,00:00:00,,0,0,False,0,0
+3442,FC Barcelona,5336,Jordi,Alba,18,Left Wing Back,1989-03-21,00:00:00,,1,0,False,0,0
+3442,FC Barcelona,12802,,Arthur,8,Right Midfield,1996-08-12,00:00:00,01:20:50,0,0,False,0,0
+3442,FC Barcelona,12524,Frenkie,de Jong,21,Left Midfield,1997-05-12,00:00:00,,0,0,False,0,0
+3442,FC Barcelona,9759,Sergio,Busquets,5,Center Midfield,1988-07-16,00:00:00,,0,0,False,0,0
+3442,FC Barcelona,6260,Lionel,Messi,10,Right Winger,1987-06-24,00:00:00,,1,0,False,0,0
+3442,FC Barcelona,956,Antoine,Griezmann,17,Center Forward,1991-03-21,00:00:00,01:21:00,0,0,False,0,0
+3442,FC Barcelona,1101,Arturo,Vidal,22,Left Winger,1987-05-22,00:00:00,01:09:01,0,0,False,0,0
+3442,FC Barcelona,7940,,Neto,13,Substitute,1989-07-19,,,0,0,False,0,0
+3442,FC Barcelona,13461,Junior,Firpo,24,Substitute,1996-08-22,,,0,0,False,0,0
+3442,FC Barcelona,11712,Clément,Lenglet,15,Substitute,1995-06-17,,,0,0,False,0,0
+3442,Real Madrid CF,12395,Federico,Valverde,15,Right Midfield,1998-07-22,00:00:00,01:25:37,0,0,False,0,0
+3442,FC Barcelona,25750,Alex,Collado,30,Substitute,1999-04-22,,,0,0,False,0,0
+3442,FC Barcelona,7044,Martin,Braithwaite,19,Left Winger,1991-06-05,01:09:01,,0,0,False,0,0
+3442,Real Madrid CF,6472,Luka,Modric,10,Right Winger,1985-09-09,01:18:27,,0,0,False,0,0
+3442,FC Barcelona,4560,Ivan,Rakitic,4,Right Midfield,1988-03-10,01:20:50,,0,0,False,0,0
+3442,FC Barcelona,24800,Ansu,Fati,31,Center Forward,2002-10-31,01:21:00,,0,0,False,0,0
+3442,Real Madrid CF,6383,Lucas,Vazquez,17,Right Midfield,1991-07-01,01:25:37,,0,0,False,0,0
+3442,Real Madrid CF,5720,Karim,Benzema,9,Center Forward,1987-12-19,00:00:00,01:30:53,0,0,False,0,0
+3442,Real Madrid CF,11251,Mariano,Diaz,24,Center Forward,1993-08-01,01:30:53,,0,0,False,1,0

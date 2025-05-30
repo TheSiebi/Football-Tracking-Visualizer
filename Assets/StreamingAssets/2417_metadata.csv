@@ -1,0 +1,2 @@
+match_id,match_date,competition,season,home_team,away_team,home_score,away_score,home_team_jersey_color,away_team_jersey_color,home_team_number_color,away_team_number_color,home_team_coach,away_team_coach,pitch_name,pitch_length,pitch_width,provider,fps
+2417,09/11/2019 17:30,Bundesliga,2019/2020,FC Bayern Munchen,Borussia Dortmund,4,0,#e4070c,#f4e422,#ffffff,#000000,Hans-Dieter Flick,Lucien Favre,Allianz Arena,105,68,,

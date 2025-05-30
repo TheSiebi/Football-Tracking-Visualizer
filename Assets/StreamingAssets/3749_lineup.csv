@@ -1,0 +1,41 @@
+match_id,team_name,player_id,player_first_name,player_last_name,player_shirt_number,player_position,player_birthdate,start_time,end_time,yellow_card,red_card,injured,goal,own_goal
+3749,Borussia Dortmund,9262,Roman,Bürki,1,Goalkeeper,1990-11-14,00:00:00,,0,0,False,0,0
+3749,Borussia Dortmund,6617,Manuel,Akanji,16,Left Center Back,1995-07-19,00:00:00,,0,0,False,0,0
+3749,Borussia Dortmund,7217,Mats,Hummels,15,Center Back,1988-12-16,00:00:00,,1,0,False,0,0
+3749,Borussia Dortmund,6502,Lukasz,Piszczek,26,Right Center Back,1985-06-03,00:00:00,01:19:24,0,0,False,0,0
+3749,Borussia Dortmund,11559,Achraf,Hakimi,5,Right Winger,1998-11-04,00:00:00,,0,0,False,0,0
+3749,Borussia Dortmund,11216,Thomas,Delaney,6,Right Midfield,1991-09-03,00:00:00,00:45:53,0,0,False,0,0
+3749,Borussia Dortmund,6564,Mahmoud,Dahoud,8,Left Midfield,1996-01-01,00:00:00,01:24:31,1,0,False,0,0
+3749,Borussia Dortmund,8879,Raphael,Guerreiro,13,Left Winger,1993-12-22,00:00:00,,0,0,False,0,0
+3749,Borussia Dortmund,16604,Erling,Haland,17,Center Forward,2000-07-21,00:00:00,01:11:20,0,0,False,0,0
+3749,Borussia Dortmund,10336,Thorgan,Hazard,23,Right Forward,1993-03-29,00:00:00,,0,0,False,0,0
+3749,Borussia Dortmund,5578,Julian,Brandt,19,Left Forward,1996-05-02,00:00:00,01:01:12,0,0,False,0,0
+3749,Borussia Dortmund,7100,Marwin,Hitz,35,Substitute,1987-09-18,,,0,0,False,0,0
+3749,Borussia Dortmund,22370,Leonardo,Balerdi,18,Substitute,1999-01-26,,,0,0,False,0,0
+3749,Borussia Dortmund,25062,Mateu,Morey,22,Substitute,2000-03-02,,,0,0,False,0,0
+3749,Borussia Dortmund,6707,Marcel,Schmelzer,29,Substitute,1988-01-22,,,0,0,False,0,0
+3749,FC Bayern Munchen,2405,David,Alaba,27,Left Center Back,1992-06-24,00:00:00,,0,0,False,0,0
+3749,FC Bayern Munchen,1308,Benjamin,Pavard,5,Right Wing Back,1996-03-28,00:00:00,,0,0,False,0,0
+3749,Borussia Dortmund,12950,Jadon,Sancho,7,Left Forward,2000-03-25,01:01:12,,0,0,False,0,0
+3749,Borussia Dortmund,6900,Mario,Götze,10,Right Center Back,1992-06-03,01:19:24,,0,0,False,0,0
+3749,FC Bayern Munchen,4822,Javier,Martinez,8,Left Winger,1988-09-02,01:26:49,,0,0,False,0,0
+3749,Borussia Dortmund,1148,Axel,Witsel,28,Left Midfield,1989-01-12,01:24:31,,0,0,False,0,0
+3749,FC Bayern Munchen,6367,Lucas,Hernandez,21,Right Center Back,1996-02-14,01:24:24,,0,0,False,0,0
+3749,FC Bayern Munchen,4555,Ivan,Perisic,14,Right Winger,1989-02-02,01:12:50,,0,0,False,0,0
+3749,Borussia Dortmund,25541,Giovanni,Reyna,32,Center Forward,2002-11-13,01:11:20,,0,0,False,0,0
+3749,Borussia Dortmund,3104,Emre,Can,27,Right Midfield,1994-01-12,00:45:53,,0,0,False,0,0
+3749,FC Bayern Munchen,4974,Jérôme,Boateng,17,Right Center Back,1988-09-03,00:00:00,01:24:24,0,0,False,0,0
+3749,FC Bayern Munchen,5482,Joshua,Kimmich,32,Right Midfield,1995-02-08,00:00:00,,0,0,False,1,0
+3749,FC Bayern Munchen,6168,Leon,Goretzka,18,Left Midfield,1995-02-06,00:00:00,,0,0,False,0,0
+3749,FC Bayern Munchen,25005,Joshua,Zirkzee,35,Substitute,2001-05-22,,,0,0,False,0,0
+3749,FC Bayern Munchen,25649,Oliver,Batista Meier,34,Substitute,2001-02-16,,,0,0,False,0,0
+3749,FC Bayern Munchen,19324,Mickael,Cuisance,11,Substitute,1999-08-16,,,0,0,False,0,0
+3749,FC Bayern Munchen,22391,Lukas,Mai,33,Substitute,2000-03-31,,,0,0,False,0,0
+3749,FC Bayern Munchen,11403,Alvaro,Odriozola,2,Substitute,1995-12-14,,,0,0,False,0,0
+3749,FC Bayern Munchen,10187,Sven,Ulreich,26,Substitute,1988-08-03,,,0,0,False,0,0
+3749,FC Bayern Munchen,5932,Kingsley,Coman,29,Right Winger,1996-06-13,00:00:00,01:12:50,0,0,False,0,0
+3749,FC Bayern Munchen,9116,Robert,Lewandowski,9,Center Forward,1988-08-21,00:00:00,,0,0,False,0,0
+3749,FC Bayern Munchen,9734,Serge,Gnabry,22,Left Winger,1995-07-14,00:00:00,01:26:49,0,0,False,0,0
+3749,FC Bayern Munchen,10318,Thomas,Müller,25,Center Midfield,1989-09-13,00:00:00,,1,0,False,0,0
+3749,FC Bayern Munchen,18099,Alphonso,Davies,19,Left Wing Back,2000-11-02,00:00:00,,1,0,False,0,0
+3749,FC Bayern Munchen,6637,Manuel,Neuer,1,Goalkeeper,1986-03-27,00:00:00,,0,0,False,0,0

@@ -1,0 +1,44 @@
+match_id,team_name,player_id,player_first_name,player_last_name,player_shirt_number,player_position,player_birthdate,start_time,end_time,yellow_card,red_card,injured,goal,own_goal
+2068,Inter Milan,9982,Stefan,de Vrij,6,Center Back,1992-02-05,00:00:00,,0,0,False,0,0
+2068,Inter Milan,7648,Milan,Skriniar,37,Left Center Back,1995-02-11,00:00:00,,0,0,False,0,0
+2068,Inter Milan,2296,Danilo,D'Ambrosio,33,Right Winger,1988-09-09,00:00:00,,0,0,False,0,0
+2068,Inter Milan,8052,Nicolo,Barella,23,Right Midfield,1997-02-07,00:00:00,,1,0,False,0,0
+2068,Juventus,4023,Gonzalo,Higuain,21,Attacking Midfield,1987-12-10,01:01:18,,0,0,False,1,0
+2068,Juventus,3104,Emre,Can,23,Left Forward,1994-01-12,01:10:29,,1,0,False,0,0
+2068,Inter Milan,7209,Matias,Vecino,8,Left Midfield,1991-08-24,00:33:22,,1,0,False,0,0
+2068,Inter Milan,7246,Matteo,Politano,16,Left Forward,1993-08-03,01:17:06,,0,0,False,0,0
+2068,Juventus,11322,Rodrigo,Bentancur,30,Right Midfield,1997-06-25,01:01:01,,0,0,False,0,0
+2068,Inter Milan,19244,Alessandro,Bastoni,95,Right Center Back,1999-04-13,00:53:38,,0,0,False,0,0
+2068,Juventus,3343,Federico,Bernardeschi,33,Attacking Midfield,1994-02-16,00:00:00,01:01:18,0,0,False,0,0
+2068,Juventus,287,Adrien,Rabiot,25,Substitute,1995-04-03,,,0,0,False,0,0
+2068,Juventus,8514,Paulo,Dybala,10,Left Forward,1993-11-15,00:00:00,01:10:29,0,0,False,1,0
+2068,Inter Milan,2715,Diego,Godin,2,Right Center Back,1986-02-16,00:00:00,00:53:38,0,0,False,0,0
+2068,Juventus,1372,Blaise,Matuidi,14,Left Midfield,1987-04-09,00:00:00,,0,0,False,0,0
+2068,Inter Milan,12801,Lautaro,Martinez,10,Left Forward,1997-08-22,00:00:00,01:17:06,0,0,False,1,0
+2068,Juventus,2083,Cristiano,Ronaldo,7,Right Forward,1985-02-05,00:00:00,,0,0,False,0,0
+2068,Juventus,3913,Gianluigi,Buffon,77,Substitute,1978-01-28,,,0,0,False,0,0
+2068,Juventus,12928,Carlo,Pinsoglio,31,Substitute,1990-03-16,,,0,0,False,0,0
+2068,Juventus,2284,Daniele,Rugani,24,Substitute,1994-07-29,,,0,0,False,0,0
+2068,Juventus,105,Aaron,Ramsey,8,Substitute,1990-12-26,,,0,0,False,0,0
+2068,Inter Milan,11305,Stefano,Sensi,12,Left Midfield,1995-08-05,00:00:00,00:33:22,0,0,False,0,0
+2068,Juventus,15243,Merih,Demiral,28,Substitute,1998-03-05,,,0,0,False,0,0
+2068,Inter Milan,9504,Samir,Handanovic,1,Goalkeeper,1984-07-14,00:00:00,,0,0,False,0,0
+2068,Juventus,7680,Miralem,Pjanic,5,Center Midfield,1990-04-02,00:00:00,,1,0,False,0,0
+2068,Juventus,9500,Sami,Khedira,6,Right Midfield,1987-04-04,00:00:00,01:01:01,0,0,False,0,0
+2068,Juventus,520,Alex,Sandro,12,Left Wing Back,1991-01-26,00:00:00,,1,0,False,0,0
+2068,Juventus,6179,Leonardo,Bonucci,19,Right Center Back,1987-05-01,00:00:00,,0,0,False,0,0
+2068,Juventus,11636,Matthijs,de Ligt,4,Left Center Back,1999-08-12,00:00:00,,0,0,False,0,0
+2068,Juventus,5521,Juan,Cuadrado,16,Right Wing Back,1988-05-26,00:00:00,,0,0,False,0,0
+2068,Juventus,10913,Wojciech,Szczesny,1,Goalkeeper,1990-04-18,00:00:00,,0,0,False,0,0
+2068,Inter Milan,22454,Sebastiano,Esposito,30,Substitute,2002-07-02,,,0,0,False,0,0
+2068,Inter Milan,9144,Roberto,Gagliardini,5,Substitute,1994-04-07,,,0,0,False,0,0
+2068,Inter Milan,975,Antonio,Candreva,87,Substitute,1987-02-28,,,0,0,False,0,0
+2068,Inter Milan,1415,Borja,Valero,20,Substitute,1985-01-12,,,0,0,False,0,0
+2068,Inter Milan,17648,Valentino,Lazaro,19,Substitute,1996-03-24,,,0,0,False,0,0
+2068,Inter Milan,798,Andrea,Ranocchia,13,Substitute,1988-02-16,,,0,0,False,0,0
+2068,Inter Milan,2077,Cristiano,Biraghi,34,Substitute,1992-09-01,,,0,0,False,0,0
+2068,Inter Milan,19233,Federico,Dimarco,21,Substitute,1997-11-10,,,0,0,False,0,0
+2068,Inter Milan,2280,Daniele,Padelli,27,Substitute,1985-10-25,,,0,0,False,0,0
+2068,Inter Milan,9279,Romelu,Lukaku,9,Right Forward,1993-05-13,00:00:00,,0,0,False,0,0
+2068,Inter Milan,6024,Kwadwo,Asamoah,18,Left Winger,1988-12-09,00:00:00,,0,0,False,0,0
+2068,Inter Milan,6717,Marcelo,Brozovic,77,Center Midfield,1992-11-16,00:00:00,,0,0,False,0,0

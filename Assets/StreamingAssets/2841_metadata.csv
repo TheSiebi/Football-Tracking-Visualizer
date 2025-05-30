@@ -1,0 +1,2 @@
+match_id,match_date,competition,season,home_team,away_team,home_score,away_score,home_team_jersey_color,away_team_jersey_color,home_team_number_color,away_team_number_color,home_team_coach,away_team_coach,pitch_name,pitch_length,pitch_width,provider,fps
+2841,18/12/2019 19:00,LaLiga,2019/2020,FC Barcelona,Real Madrid CF,0,0,#0008ff,#ffffff,#ffc01a,#bfb600,Ernesto Valverde, Zinedine Zidane,Camp Nou,105,68,,

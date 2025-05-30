@@ -1,0 +1,41 @@
+match_id,team_name,player_id,player_first_name,player_last_name,player_shirt_number,player_position,player_birthdate,start_time,end_time,yellow_card,red_card,injured,goal,own_goal
+4039,Manchester City,9077,Riyad,Mahrez,26,Substitute,1991-02-21,,,0,0,False,1,0
+4039,Liverpool Football Club,11879,Minamino,Takumi,18,Left Winger,1995-01-16,01:24:10,,0,0,False,0,0
+4039,Manchester City,1336,Bernardo,Silva,20,Left Winger,1994-08-10,01:18:08,,0,0,False,0,0
+4039,Manchester City,8039,Nicolas,Otamendi,30,Left Center Back,1988-02-12,01:17:53,,0,0,False,0,0
+4039,Liverpool Football Club,25648,Neco,Williams,76,Right Wing Back,2001-04-13,01:15:23,,0,0,False,0,0
+4039,Manchester City,5066,Joao,Cancelo,27,Right Wing Back,1994-05-27,01:12:24,,0,0,False,0,0
+4039,Liverpool Football Club,515,Alex,Oxlade-Chamberlain,15,Substitute,1993-08-15,,,0,0,False,0,1
+4039,Liverpool Football Club,2792,Divock,Origi,27,Center Forward,1995-04-18,01:01:35,,0,0,False,0,0
+4039,Liverpool Football Club,11589,Naby,Keita,8,Left Midfield,1995-02-10,01:01:26,,0,0,False,0,0
+4039,Liverpool Football Club,14219,Harvey,Elliott,67,Substitute,2003-04-04,,,0,0,False,0,0
+4039,Liverpool Football Club,4683,James,Milner,7,Substitute,1986-01-04,,,0,0,False,0,0
+4039,Liverpool Football Club,11855,Curtis,Jones,48,Substitute,2001-01-30,,,0,0,False,0,0
+4039,Liverpool Football Club,274,,Adrian,13,Substitute,1987-01-03,,,0,0,False,0,0
+4039,Liverpool Football Club,9143,Roberto,Firmino,9,Center Forward,1991-10-02,00:00:00,01:01:35,0,0,False,0,0
+4039,Liverpool Football Club,9449,Sadio,Mane,10,Left Winger,1992-04-10,00:00:00,01:24:10,0,0,False,0,0
+4039,Liverpool Football Club,7745,Mohamed,Salah,11,Right Winger,1992-06-15,00:00:00,,0,0,False,0,0
+4039,Liverpool Football Club,5318,Jordan,Henderson,14,Right Midfield,1990-06-17,00:00:00,,1,0,False,0,0
+4039,Liverpool Football Club,3267,,Fabinho,3,Center Midfield,1993-10-23,00:00:00,,0,0,False,0,0
+4039,Liverpool Football Club,3847,Georginio,Wijnaldum,5,Left Midfield,1990-11-11,00:00:00,01:01:26,0,0,False,0,0
+4039,Liverpool Football Club,851,Andrew,Robertson,26,Left Wing Back,1994-03-11,00:00:00,,0,0,False,0,0
+4039,Liverpool Football Club,10748,Virgil,van Dijk,4,Left Center Back,1991-07-08,00:00:00,,0,0,False,0,0
+4039,Liverpool Football Club,11537,Joe,Gomez,12,Right Center Back,1997-05-23,00:00:00,00:44:08,0,0,False,0,0
+4039,Manchester City,8856,Raheem,Sterling,7,Left Winger,1994-12-08,00:00:00,01:18:08,0,0,False,0,0
+4039,Manchester City,9202,Rodrigo,Hernandez,16,Center Midfield,1996-06-22,00:00:00,,0,0,False,0,0
+4039,Manchester City,11566,Gabriel,Jesus,9,Center Forward,1997-04-03,00:00:00,00:57:14,0,0,False,0,0
+4039,Manchester City,5821,Kevin,de Bruyne,17,Right Midfield,1991-06-28,00:00:00,,0,0,False,1,0
+4039,Manchester City,4460,Ilkay,Gündogan,8,Left Midfield,1990-10-24,00:00:00,,0,0,False,0,0
+4039,Manchester City,1302,Benjamin,Mendy,22,Left Wing Back,1994-07-17,00:00:00,,1,0,False,0,0
+4039,Manchester City,24015,Eric,Garcia,50,Right Center Back,2001-01-09,00:00:00,,0,0,False,0,0
+4039,Manchester City,1152,Aymeric,Laporte,14,Left Center Back,1994-05-27,00:00:00,01:17:53,0,0,False,0,0
+4039,Manchester City,6037,Kyle,Walker,2,Right Wing Back,1990-05-28,00:00:00,01:12:24,0,0,False,0,0
+4039,Manchester City,2934,,Ederson,31,Goalkeeper,1993-08-17,00:00:00,,0,0,False,0,0
+4039,Liverpool Football Club,11847,Trent,Alexander-Arnold,66,Right Wing Back,1998-10-07,00:00:00,01:15:23,0,0,False,0,0
+4039,Liverpool Football Club,11565,Alisson Ramses,Becker,1,Goalkeeper,1992-10-02,00:00:00,,0,0,False,0,0
+4039,Manchester City,11671,Oleksandr,Zinchenko,11,Substitute,1996-12-15,,,0,0,False,0,0
+4039,Manchester City,2501,David,Silva,21,Substitute,1986-01-08,,,0,0,False,0,0
+4039,Manchester City,25334,Thomas,Doyle,69,Substitute,2001-10-17,,,0,0,False,0,0
+4039,Manchester City,5202,John,Stones,5,Substitute,1994-05-28,,,0,0,False,0,0
+4039,Manchester City,1947,Claudio,Bravo,1,Substitute,1983-04-13,,,0,0,False,0,0
+4039,Manchester City,11672,Phil,Foden,47,Right Winger,2000-05-28,00:00:00,,0,0,False,1,0
