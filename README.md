@@ -36,10 +36,10 @@ For every game you wish to visualize, you need to prepare four CSV files, with t
 #### `{matchid}_tracking.csv`
 | match_id | half | frame_id | timestamp | object_id | x      | y      | z     | extrapolated |
 |----------|------|----------|-----------|-----------|--------|--------|-------|--------------|
-| 12345    | 1    | 452      | 14.123    | 7         | 34.2   | 21.8   | 0.0   | False        |
+| 12345    | 1    | 452      | 14123    | 7         | 34.2   | 21.8   | 0.0   | False        |
 
 **Notes**:
-- timestamp in seconds
+- timestamp in milliseconds
 - x, y, z in meters
 - ball should have object_id -1
 
