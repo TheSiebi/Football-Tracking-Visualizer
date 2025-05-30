@@ -19,6 +19,18 @@ public class FootballPitchRenderer : MonoBehaviour
     private int circleSegments = 50;
     private int arcSegments = 10;
 
+    static Material _lineMat;
+    void Awake()
+    {
+        if (_lineMat == null)
+        {
+            _lineMat = new Material(Shader.Find("Unlit/Color"));
+            _lineMat.SetColor("_Color", Color.black); // URP: "_BaseColor"
+            _lineMat.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Geometry; // 2000
+            _lineMat.SetInt("_ZWrite", 1); // make sure it writes depth
+        }
+    }
+
     public void DrawPitchMarkings(float pitchWidth, float pitchHeight)
     {
         // Clear any previous markings
@@ -141,10 +153,10 @@ public class FootballPitchRenderer : MonoBehaviour
         lr.loop = loop;
         lr.startWidth = lineWidth;
         lr.endWidth = lineWidth;
-        lr.material = new Material(Shader.Find("Sprites/Default")); // using a simple unlit material
         lr.startColor = Color.black;
         lr.endColor = Color.black;
         lr.useWorldSpace = true;
+        lr.sharedMaterial = _lineMat;
     }
 
     // Generates points for a full circle on the XZ plane.
@@ -209,7 +221,7 @@ public class FootballPitchRenderer : MonoBehaviour
         mesh.RecalculateNormals();
         mf.mesh = mesh;
 
-        mr.material = new Material(Shader.Find("Sprites/Default"));
-        mr.material.color = Color.black;
+        mr.sharedMaterial = _lineMat;
+        mr.sharedMaterial.color = Color.black;
     }
 }
