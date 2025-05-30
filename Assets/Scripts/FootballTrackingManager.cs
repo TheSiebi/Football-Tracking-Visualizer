@@ -90,6 +90,20 @@ public class FootballTrackingManager : MonoBehaviour
     public GameObject goalPrefab;
     public TMP_Dropdown dropdown;
 
+    public static readonly Dictionary<string, string> CustomAcronyms = new Dictionary<string, string>
+    {
+        { "Juventus", "JUV" },
+        { "Inter Milan", "INT" },
+        { "Olympique de Marseille", "MAR" },
+        { "Paris Saint-Germain", "PSG" },
+        { "Borussia Dortmund", "BVB" },
+        { "FC Bayern Munchen", "BMU" },
+        { "Manchester City", "MCI" },
+        { "Liverpool Football Club", "LFC" },
+        { "Real Madrid CF", "RMA" },
+        { "FC Barcelona", "BAR" },
+    };
+
     // Dictionary to hold tracking data for each object_id.
     // Each object_id maps to a dict of keyframes, with keys being match periods
     private Dictionary<int, Dictionary<string, List<TrackingData>>> trackingDataDict = new Dictionary<int, Dictionary<string, List<TrackingData>>>();
@@ -113,6 +127,8 @@ public class FootballTrackingManager : MonoBehaviour
     private Dictionary<int, string> matchIDs = new Dictionary<int, string>();
 
     private float simulationTime = 0f; // in seconds
+
+
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
@@ -141,7 +157,7 @@ public class FootballTrackingManager : MonoBehaviour
     void DetectAvailableMatches()
     {
         // Get all files in data directory that end with "_metadata.csv"
-        string directory = PathPicker.SelectedPath == null || PathPicker.SelectedPath == "" ? Path.Combine(Application.dataPath, "data") : PathPicker.SelectedPath;
+        string directory = PathPicker.SelectedPath == null || PathPicker.SelectedPath == "" ? Path.Combine(Application.streamingAssetsPath) : PathPicker.SelectedPath;
         string[] files = Directory.GetFiles(directory, "*_metadata.csv");
 
         foreach (string file in files)
@@ -161,8 +177,12 @@ public class FootballTrackingManager : MonoBehaviour
             string[] tokens = line.Split(',');
 
             int matchID = int.Parse(tokens[0]);
-            string homeTeam = tokens[4].Trim().Substring(0, Math.Min(3, tokens[4].Trim().Length)).ToUpper();
-            string awayTeam = tokens[5].Trim().Substring(0, Math.Min(3, tokens[5].Trim().Length)).ToUpper();
+            string homeTeamName = tokens[4].Trim();
+            string homeTeam = CustomAcronyms.ContainsKey(homeTeamName) ? CustomAcronyms[homeTeamName] : homeTeamName[..3].ToUpper();
+
+            string awayTeamName = tokens[5].Trim();
+            string awayTeam = CustomAcronyms.ContainsKey(awayTeamName) ? CustomAcronyms[awayTeamName] : awayTeamName[..3].ToUpper();
+
 
             matchIDs[matchID] = $"{homeTeam} vs {awayTeam}";
             Debug.Log($"Detected match: {matchIDs[matchID]} (ID: {matchID})");
@@ -238,18 +258,28 @@ public class FootballTrackingManager : MonoBehaviour
     {
         if (timeSlider == null) return;
 
+        float tMin = float.MaxValue;
         float tMax = 0f;
+
         foreach (var kvp in trackingDataDict)
         {
             if (kvp.Value.ContainsKey(currentPeriod))
             {
                 var kfs = kvp.Value[currentPeriod];
-                if (kfs.Count > 0 && kfs[kfs.Count - 1].time > tMax)
-                    tMax = kfs[kfs.Count - 1].time;
+                if (kfs.Count > 0)
+                {
+                    float start = kfs[0].time;
+                    float end = kfs[kfs.Count - 1].time;
+
+                    if (start < tMin) tMin = start;
+                    if (end > tMax) tMax = end;
+                }
             }
         }
+
+        timeSlider.minValue = (tMin == float.MaxValue) ? 0f : tMin;
         timeSlider.maxValue = tMax;
-        timeSlider.value = 0f;
+        timeSlider.value = timeSlider.minValue;
     }
 
     void OnSpeedChanged(int idx)
@@ -321,7 +351,7 @@ public class FootballTrackingManager : MonoBehaviour
         string filePath;
         if (PathPicker.SelectedPath == null || PathPicker.SelectedPath == "")
         {
-            filePath = Path.Combine(Application.dataPath, "data", csvFileName);
+            filePath = Path.Combine(Application.streamingAssetsPath, csvFileName);
         } else
         {
             filePath = Path.Combine(PathPicker.SelectedPath, csvFileName);
@@ -399,8 +429,8 @@ public class FootballTrackingManager : MonoBehaviour
         {
             date = tokens[1],
             competition = tokens[2],
-            homeTeam = tokens[4],
-            awayTeam = tokens[5],
+            homeTeam = tokens[4].Trim(),
+            awayTeam = tokens[5].Trim(),
             pitchWidth = float.Parse(tokens[16]),
             pitchLength = float.Parse(tokens[15]),
             homeTeamJerseyColor = homeTeamJerseyColor,
@@ -463,7 +493,7 @@ public class FootballTrackingManager : MonoBehaviour
             // player_position,player_birthdate,start_time,end_time,yellow_card,red_card,injured,goal,own_goal
             // Parse values (ignoring match_id in this example)
             string[] tokens = line.Split(',');
-            string name = tokens[3][0] + ". " + tokens[4];
+            string name = tokens[3] != "" ? tokens[3][0] + ". " + tokens[4] : tokens[4]; // some players apparently don't have a first name
             string team = tokens[1].Split(',')[0]; // Team name has format Spain, Women
             int number = int.Parse(tokens[5]);
             string position = tokens[6];
@@ -587,7 +617,8 @@ void LoadTrackingData()
             float x = float.Parse(tokens[5]);
             // Invert z-axis to match Unity's coordinate system.
             float z = float.Parse(tokens[6]);
-            float y = float.Parse(tokens[7]);
+            float y = 0f;
+            float.TryParse(tokens[7], out y);
 
             // normalize to a 100.6 m x 64 m pitch if enabled
             if (normalizePitchSize && match != null && match.pitchLength > 0f && match.pitchWidth > 0f)
@@ -647,6 +678,14 @@ void LoadTrackingData()
             }
             else
             {
+                // Check if in player dict
+                if (!playerDict.ContainsKey(objectId))
+                {
+                    Debug.Log($"Player with ID {objectId} not found in player dict");
+                    continue;
+                }
+                    
+                
                 // Get player with object ID
                 Player player = playerDict[objectId];
                 GameObject obj = Instantiate(playerPrefab);
@@ -720,6 +759,10 @@ void LoadTrackingData()
         foreach (var kvp in trackingDataDict)
         {
             int objectId = kvp.Key;
+
+            if (!objectInstances.ContainsKey(objectId))
+                continue;
+
             GameObject obj = objectInstances[objectId];
 
             if (!kvp.Value.ContainsKey(currentPeriod))

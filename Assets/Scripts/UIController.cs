@@ -18,11 +18,6 @@ public class UIController : MonoBehaviour
     public RawImage homeImage;
     public RawImage awayImage;
 
-    private Dictionary<string, string> customAcronyms = new Dictionary<string, string>
-    {
-        { "South Africa", "RSA" }
-    };
-
     void Start()
     {
         // Register callback events for each toggle.
@@ -36,8 +31,8 @@ public class UIController : MonoBehaviour
     public void SetMetadata(string home, string away, Color homeColor, Color awayColor)
     {
         // Set text for home and away to first three characters capitalized
-        homeText.text = customAcronyms.ContainsKey(home) ? customAcronyms[home] : home[..3].ToUpper();
-        awayText.text = customAcronyms.ContainsKey(away) ? customAcronyms[away] : away[..3].ToUpper();
+        homeText.text = FootballTrackingManager.CustomAcronyms.ContainsKey(home) ? FootballTrackingManager.CustomAcronyms[home] : home[..3].ToUpper();
+        awayText.text = FootballTrackingManager.CustomAcronyms.ContainsKey(away) ? FootballTrackingManager.CustomAcronyms[away] : away[..3].ToUpper();
 
         homeImage.color = homeColor;
         awayImage.color = awayColor;
