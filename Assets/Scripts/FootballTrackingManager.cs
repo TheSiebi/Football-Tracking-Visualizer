@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System.Collections;
+using UnityEngine.Networking;
 
 /// <summary>
 /// Struct representing a single keyframe for an object's position at a specific time.
@@ -57,6 +59,7 @@ public class FootballTrackingManager : MonoBehaviour
     public int matchID;
 
     public bool replay = true; // whether to instantiate objects and move them in the scene
+    public bool replayReady = false; // whether the replay is ready to be played, set to true after loading all data
     public bool normalizePitchSize = false;   // scales tracking to 105 m x 68 m when true
 
     public Match match;
@@ -68,11 +71,13 @@ public class FootballTrackingManager : MonoBehaviour
     private FootballPitchRenderer pitchRenderer;
 
     [SerializeField]
-    private TrajectoryVisualizer tv;
-
-    [SerializeField]
     private TextMeshProUGUI errorText;
 
+    [SerializeField]
+    private Canvas canvas;
+
+    [SerializeField]
+    private Canvas loadingCanvas; // shows loading animation while data is being loaded
 
     [SerializeField]
     private Slider timeSlider; // scrubs current match time
@@ -123,10 +128,53 @@ public class FootballTrackingManager : MonoBehaviour
 
     // List to store keys corresponding to the dropdown options.
     private List<int> keyList = new List<int>();
-
+    private List<string> idList = new List<string>
+        {
+            "2068", "2269", "2417", "2440", "2841", "3442", "3518", "3749", "4039"
+        };
     private Dictionary<int, string> matchIDs = new Dictionary<int, string>();
 
     private float simulationTime = 0f; // in seconds
+    private Dictionary<string, string[]> loadedCSVFiles = new();
+
+
+    IEnumerator PreloadCSVFiles(List<string> filenames, Action onComplete)
+    {
+        foreach (string filename in filenames)
+        {
+            string fullPath = Path.Combine(Application.streamingAssetsPath, filename);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        UnityWebRequest www = UnityWebRequest.Get(fullPath);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError($"Failed to load {filename}: {www.error}");
+            loadedCSVFiles[filename] = null;
+        }
+        else
+        {
+            string[] lines = www.downloadHandler.text.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            loadedCSVFiles[filename] = lines;
+        }
+#else
+            if (!File.Exists(fullPath))
+            {
+                Debug.LogError($"File not found: {fullPath}");
+                loadedCSVFiles[filename] = null;
+            }
+            else
+            {
+                Debug.Log($"Loading CSV file: {fullPath}");
+                loadedCSVFiles[filename] = File.ReadAllLines(fullPath);
+            }
+            yield return null; // ensure the method yields at least once for consistency across platforms
+#endif
+        }
+
+        onComplete?.Invoke();
+    }
 
 
 
@@ -140,7 +188,29 @@ public class FootballTrackingManager : MonoBehaviour
 
     void Awake()
     {
+        canvas.enabled = false; // hide canvas until data is loaded
+        loadingCanvas.enabled = true; // show loading canvas
         Application.logMessageReceived += HandleLog;
+
+        List<string> filenames = new List<string>();
+        foreach (string newID in idList)
+        {
+            filenames.AddRange(new[]
+            {
+                $"{newID}_metadata.csv",
+                $"{newID}_lineup.csv",
+                $"{newID}_tracking.csv"
+            });
+        }
+
+        StartCoroutine(PreloadCSVFiles(filenames, () =>
+        {
+            Init();
+        }));
+    }
+
+    void Init()
+    {
         DetectAvailableMatches();
         InitDropdown();
         dropdown.value = 2; // Set default value to the third option, will trigger load
@@ -152,25 +222,20 @@ public class FootballTrackingManager : MonoBehaviour
         });
 
         InitPeriodDropdown();
+        replayReady = true;
+        loadingCanvas.enabled = false; // hide loading canvas after data is loaded
+        canvas.enabled = true; // show canvas after data is loaded
     }
 
     void DetectAvailableMatches()
     {
-        // Get all files in data directory that end with "_metadata.csv"
-        string directory = PathPicker.SelectedPath == null || PathPicker.SelectedPath == "" ? Path.Combine(Application.streamingAssetsPath) : PathPicker.SelectedPath;
-        string[] files = Directory.GetFiles(directory, "*_metadata.csv");
-
-        foreach (string file in files)
+        foreach (var kv in loadedCSVFiles)
         {
-            // Load file metadata and populate matchID dictionary
-            string fileName = Path.GetFileName(file);
-            string[] lines = GetCSVLines(fileName);
-
-            if (lines == null || lines.Length < 2)
-            {
-                Debug.LogWarning($"File {fileName} is empty or missing header.");
+            string fileName = kv.Key;
+            if (!fileName.EndsWith("_metadata.csv"))
                 continue;
-            }
+
+            string[] lines = kv.Value;
 
             string line = lines[1];
             line = Regex.Replace(line, @"""([^,]+),[^""]+""", "$1");
@@ -340,38 +405,17 @@ public class FootballTrackingManager : MonoBehaviour
         LoadMetaData();
         LoadPlayerData();
         LoadTrackingData();
-
-        if (tv != null)
-            tv.Reset();
     }
 
-    public static string[] GetCSVLines(string csvFileName)
+    public string[] GetCSVLines(string filename)
     {
-        // Build the file path, depending on whether a path was selected (always the case for builds, but not required in editor)
-        string filePath;
-        if (PathPicker.SelectedPath == null || PathPicker.SelectedPath == "")
+        if (loadedCSVFiles.TryGetValue(filename, out var lines))
         {
-            filePath = Path.Combine(Application.streamingAssetsPath, csvFileName);
-        } else
-        {
-            filePath = Path.Combine(PathPicker.SelectedPath, csvFileName);
+            return lines;
         }
 
-        if (!File.Exists(filePath))
-        {
-            Debug.LogError("CSV file not found: " + filePath);
-            return null;
-        }
-
-        // Read all lines from the CSV file.
-        string[] lines = File.ReadAllLines(filePath);
-        if (lines.Length <= 1)
-        {
-            Debug.LogError("CSV file is empty or missing header.");
-            return null;
-        }
-
-        return lines;
+        Debug.LogError("CSV not preloaded: " + filename);
+        return null;
     }
 
     public Dictionary<string, List<TrackingData>> GetTrackingData(int objID)
@@ -380,7 +424,7 @@ public class FootballTrackingManager : MonoBehaviour
     }
 
 
-    public static string GetHomeTeamName(int matchID)
+    public string GetHomeTeamName(int matchID)
     {
         string[] lines = GetCSVLines(matchID + "_metadata.csv");
 
@@ -514,7 +558,7 @@ public class FootballTrackingManager : MonoBehaviour
     }
 
 
-    public static Dictionary<string, List<TrackingData>> LoadBallTrackingData(int matchID)
+    public Dictionary<string, List<TrackingData>> LoadBallTrackingData(int matchID)
     {
         // Read pitch dimensions from *_metadata.csv (needed for normalising)
         float pitchLength = 0f;
@@ -738,8 +782,8 @@ void LoadTrackingData()
 
     void Update()
     {
-        // Only runs if replay is true
-        if (!replay)
+        // Only runs if replay is true and data ready
+        if (!replay || !replayReady)
             return;
 
         // Advance the simulation time.
