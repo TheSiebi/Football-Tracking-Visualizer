@@ -66,4 +66,5 @@ If you are on another OS and/or want to build the application yourself/run it th
 - 3D Goal Models by Emmanuel PUYBARET / eTeks <info@eteks.com>  and Scopia Visual Interfaces Systems, s.l. (http://www.scopia.es)
 - [Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser) by gkngkc
 - [SkillCorner Open Data](https://github.com/SkillCorner/opendata)
+- [(Unity) Better Minimal WebGL Template](https://seansleblanc.itch.io/better-minimal-webgl-template)
 
