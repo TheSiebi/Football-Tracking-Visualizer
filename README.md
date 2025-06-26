@@ -35,7 +35,7 @@ For every game you wish to visualize, you need to prepare four CSV files, with t
 **Notes**:
 - type should be one of `{throw_in, goal_kick, free_kick, corner}`
 - matchPeriod should be one of `{1H, 2H}`
-- timestamp and duration in seconds
+- timestamp (w.r.t. start of match) and duration in seconds
 
 #### `{matchid}_tracking.csv`
 | match_id | half | frame_id | timestamp | object_id | x      | y      | z     | extrapolated |
@@ -43,7 +43,7 @@ For every game you wish to visualize, you need to prepare four CSV files, with t
 | 12345    | 1    | 452      | 14123    | 7         | 34.2   | 21.8   | 0.0   | False        |
 
 **Notes**:
-- timestamp in milliseconds
+- timestamp in milliseconds (w.r.t. start of half-time)
 - x, y, z in meters
 - ball should have object_id -1
 
