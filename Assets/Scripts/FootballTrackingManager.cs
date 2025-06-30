@@ -143,7 +143,6 @@ public class FootballTrackingManager : MonoBehaviour
         Application.logMessageReceived += HandleLog;
         DetectAvailableMatches();
         InitDropdown();
-        dropdown.value = 2; // Set default value to the third option, will trigger load
 
         InitSpeedDropdown();
         timeSlider?.onValueChanged.AddListener(v =>
@@ -152,6 +151,20 @@ public class FootballTrackingManager : MonoBehaviour
         });
 
         InitPeriodDropdown();
+    }
+
+    void Start()
+    {
+        if (dropdown != null && dropdown.options.Count > 0 && keyList.Count > 0)
+        {
+            // Load first match in dropdown list
+            dropdown.value = 0;
+            LoadMatch(keyList[0]);
+        }
+        else
+        {
+            Debug.LogError("Dropdown or keylist is not initialized or no matches found.");
+        }
     }
 
     void DetectAvailableMatches()
@@ -306,6 +319,8 @@ public class FootballTrackingManager : MonoBehaviour
 
     public void LoadMatch(int newID)
     {
+        Debug.Log("Loading match with ID: " + newID);
+
         // Set new ID and reset current scene
         matchID = newID;
 
